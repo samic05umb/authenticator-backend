@@ -11,4 +11,12 @@ public class AuthenticationResponse {
     private Boolean login;
     private Users user;
 
+    @Override
+    public String toString() {
+        return "La respuesta es: {" +
+                "message='" + message + '\'' +
+                ", login=" + login +
+                ", user=" + user +
+                '}';
+    }
 }

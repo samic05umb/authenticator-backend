@@ -26,4 +26,18 @@ public class Users {
     private String numeroCelular;
     private String correoElectronico;
 
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id=" + id +
+                ", numeroDocumento='" + "xxxxxxxx" + '\'' +
+                ", tipoDocumento='" + "xxxxxxxx" + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", usuario='" + usuario + '\'' +
+                ", clave='" + "xxxxxxxx" + '\'' +
+                ", numeroCelular='" + numeroCelular + '\'' +
+                ", correoElectronico='" + correoElectronico + '\'' +
+                '}';
+    }
 }

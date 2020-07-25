@@ -1,6 +1,7 @@
 package com.umb.mvc.login.authenticator.controller;
 
 import com.umb.mvc.login.authenticator.commons.exceptions.ApplicationException;
+import com.umb.mvc.login.authenticator.commons.exceptions.ClientRequestException;
 import com.umb.mvc.login.authenticator.model.AuthenticationRequest;
 import com.umb.mvc.login.authenticator.model.AuthenticationResponse;
 import com.umb.mvc.login.authenticator.view.AuthenticationHandler;
@@ -20,7 +21,7 @@ public class AuthController {
 private final AuthenticationHandler authenticationHandler;
     @PostMapping("login")
     public ResponseEntity<AuthenticationResponse> getSavingsBalance(
-            @RequestBody @Validated AuthenticationRequest request) throws ApplicationException {
+            @RequestBody @Validated AuthenticationRequest request) throws ApplicationException, ClientRequestException {
         return ResponseEntity.ok(authenticationHandler.authenticate(request));
     }
 }
